@@ -9,6 +9,10 @@
 
 @endif
 
+{{-- thêm header --}}
+@include('header')
+
+
 <div class="card">
 	<div class="card-header">
 		<div class="row">
@@ -61,5 +65,5 @@
 		{!! $data->links() !!}
 	</div>
 </div>
-
+@include('footer')
 @endsection
