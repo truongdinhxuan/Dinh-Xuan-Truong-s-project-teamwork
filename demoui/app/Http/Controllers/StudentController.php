@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
-use App\Http\Requests\StoreStudentRequest;
-use App\Http\Requests\UpdateStudentRequest;
+use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -27,26 +26,27 @@ class StudentController extends Controller
      */
     public function create()
     {
+        //
         return view('create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreStudentRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStudentRequest $request)
+    public function store(Request $request)
     {
+        //
         $request->validate([
             'name'=> 'required',
             'email'=>'required|email',
-            'address'=>'required',
-            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
         ]);
 
-        $file_name = time() . '.' . request()->student_image->getClientOriginalExtension();
-        request()->student_image->move(public_path('images'), $file_name);
+        $file_name = time() . '.' . request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('images'), $file_name);
         $student = new Student;
         $student->name = $request->name;
         $student->email= $request->email;
@@ -61,19 +61,20 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Student $student)
     {
         //
         return view('show', compact('student'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Student $student)
@@ -85,11 +86,11 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateStudentRequest  $request
-     * @param  \App\Models\Student  $student
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateStudentRequest $request, Student $student)
+    public function update(Request $request, Student $student)
     {
         //
         $request->validate([
@@ -123,19 +124,19 @@ class StudentController extends Controller
         $student->save();
 
         return redirect()->route('students.index')->with('success', 'Student Data has been updated successfully');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Student  $student
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Student $student)
     {
         //
         $student->delete();
-
         return redirect()->route('students.index')->with('success', 'Student Data deleted successfully');
     }
 }

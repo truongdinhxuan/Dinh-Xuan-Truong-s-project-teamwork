@@ -42,7 +42,7 @@
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">Student Gender</label>
 				<div class="col-sm-10">
-					<select name=" gender" class="form-control">
+					<select name="gender" class="form-control">
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
 					</select>

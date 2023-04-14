@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-
+@include('header')
 <div class="card">
 	<div class="card-header">Edit Student</div>
 	<div class="card-body">
@@ -54,5 +54,5 @@
 <script>
 document.getElementsByName('gender')[0].value = "{{ $student->gender }}";
 </script>
-
+@include('footer')
 @endsection('content')

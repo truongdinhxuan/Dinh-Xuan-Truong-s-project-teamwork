@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container mt-5">
-    <strong><h1 class="text-primary mt-3 mb-4 text-center" >Bắt đầu</h1></strong>
+    <strong><a href="/students"><h1 class="text-primary mt-3 mb-4 text-center" >Bắt đầu</h1></a></strong>
     @yield('content')
     </div>
 </body>
