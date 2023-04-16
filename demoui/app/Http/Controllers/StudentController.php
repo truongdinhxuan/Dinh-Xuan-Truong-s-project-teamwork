@@ -16,7 +16,7 @@ class StudentController extends Controller
     {
         //
         $data = Student::latest()->paginate(5);
-        return view('index', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('students.index', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -27,7 +27,7 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return view('create');
+        return view('students.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class StudentController extends Controller
     public function show(Student $student)
     {
         //
-        return view('show', compact('student'));
+        return view('students.show', compact('student'));
 
     }
 
@@ -80,7 +80,7 @@ class StudentController extends Controller
     public function edit(Student $student)
     {
         //
-        return view('edit', compact('student'));
+        return view('students.edit', compact('student'));
     }
 
     /**

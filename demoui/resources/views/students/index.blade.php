@@ -1,4 +1,4 @@
-@extends('master')
+@extends('students/master')
 @section('content')
 
 @if($message = Session::get('success'))
@@ -10,7 +10,7 @@
 @endif
 
 {{-- thêm header --}}
-@include('header')
+{{-- @include('header') --}}
 
 
 <div class="card">
@@ -65,5 +65,5 @@
 		{!! $data->links() !!}
 	</div>
 </div>
-@include('footer')
+{{-- @include('footer') --}}
 @endsection

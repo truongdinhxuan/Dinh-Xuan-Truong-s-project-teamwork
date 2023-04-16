@@ -1,4 +1,4 @@
-@extends('master')
+@extends('students/master')
 
 @section('content')
 
