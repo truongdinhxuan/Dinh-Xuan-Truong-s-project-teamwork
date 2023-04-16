@@ -40,19 +40,19 @@ class StudentController extends Controller
     {
         //
         $request->validate([
-            'name'=> 'required',
-            'email'=>'required|email',
-            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
+            'student_name'=> 'required',
+            'student_email'=>'required|email',
+            'student_image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
         ]);
 
-        $file_name = time() . '.' . request()->image->getClientOriginalExtension();
-        request()->image->move(public_path('images'), $file_name);
+        $file_name = time() . '.' . request()->student_image->getClientOriginalExtension();
+        request()->student_image->move(public_path('images'), $file_name);
         $student = new Student;
-        $student->name = $request->name;
-        $student->email= $request->email;
-        $student->address= $request->address;
-        $student->gender = $request->gender;
-        $student->image = $file_name;
+        $student->student_name = $request->student_name;
+        $student->student_email= $request->student_email;
+        $student->student_address= $request->student_address;
+        $student->student_gender = $request->student_gender;
+        $student->student_image = $file_name;
         $student->save();
 
         return redirect()->route('students.index')->with('success', 'Student Added successfully.');
@@ -94,32 +94,32 @@ class StudentController extends Controller
     {
         //
         $request->validate([
-            'name'=> 'required',
-            'email'=>'required|email',
-            'address'=>'required',
-            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+            'student_name'=> 'required',
+            'student_email'=>'required|email',
+            'student_address'=>'required',
+            'student_image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
         ]);
 
-        $image = $request->hidden_student_image;
+        $student_image = $request->hidden_student_image;
 
         if($request->student_image != '')
         {
-            $image = time() . '.' . request()->student_image->getClientOriginalExtension();
+            $student_image = time() . '.' . request()->student_image->getClientOriginalExtension();
 
-            request()->image->move(public_path('images'), $image);
+            request()->student_image->move(public_path('images'), $student_image);
         }
 
-        $student = Student::find($request->hidden_id);
+        $student = Student::find($request->hidden_student_id);
 
-        $student->name = $request->name;
+        $student->student_name = $request->student_name;
 
-        $student->email = $request->email;
+        $student->student_email = $request->student_email;
         
-        $student->address = $request->address;
+        $student->student_address = $request->student_address;
 
-        $student->gender = $request->gender;
+        $student->student_gender = $request->student_gender;
 
-        $student->image = $image;
+        $student->student_image = $student_image;
 
         $student->save();
 

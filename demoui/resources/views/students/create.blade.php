@@ -24,25 +24,25 @@
 			<div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Name</label>
 				<div class="col-sm-10">
-					<input type="text" name="name" class="form-control" />
+					<input type="text" name="student_name" class="form-control" />
 				</div>
 			</div>
 			<div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Email</label>
 				<div class="col-sm-10">
-					<input type="text" name="email" class="form-control" />
+					<input type="text" name="student_email" class="form-control" />
 				</div>
 			</div>
             <div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Adress</label>
 				<div class="col-sm-10">
-					<input type="text" name="address" class="form-control" />
+					<input type="text" name="student_address" class="form-control" />
 				</div>
 			</div>
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">Student Gender</label>
 				<div class="col-sm-10">
-					<select name="gender" class="form-control">
+					<select name="student_gender" class="form-control">
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
 					</select>
@@ -51,7 +51,7 @@
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">Student Image</label>
 				<div class="col-sm-10">
-					<input type="file" name="image" />
+					<input type="file" name="student_image" />
 				</div>
 			</div>
 			<div class="text-center">
