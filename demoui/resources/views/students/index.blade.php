@@ -37,17 +37,17 @@
 				@foreach($data as $row)
 
 					<tr>
-						<td><img src="{{ asset('images/' . $row->image) }}" width="75" /></td>
-						<td>{{ $row->name }}</td>
-						<td>{{ $row->email }}</td>
-						<td>{{ $row->address }}</td>
-						<td>{{ $row->gender }}</td>
+						<td><img src="{{ asset('images/' . $row->student_image) }}" width="75" /></td>
+						<td>{{ $row->student_name }}</td>
+						<td>{{ $row->student_email }}</td>
+						<td>{{ $row->student_address }}</td>
+						<td>{{ $row->student_gender }}</td>
 						<td>
-							<form method="post" action="{{ route('students.destroy', $row->id) }}">
+							<form method="post" action="{{ route('students.destroy', $row->student_id) }}">
 								@csrf
 								@method('DELETE')
-								<a href="{{ route('students.show', $row->id) }}" class="btn btn-primary btn-sm">View</a>
-								<a href="{{ route('students.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
+								<a href="{{ route('students.show', $row->student_id) }}" class="btn btn-primary btn-sm">View</a>
+								<a href="{{ route('students.edit', $row->student_id) }}" class="btn btn-warning btn-sm">Edit</a>
 								<input type="submit" class="btn btn-danger btn-sm" value="Delete" />
 							</form>
 							
