@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,6 +15,8 @@ class CourseController extends Controller
     public function index()
     {
         //
+        $data = Course::latest()->paginate(5);
+        return view('course.index', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -24,6 +27,7 @@ class CourseController extends Controller
     public function create()
     {
         //
+        return view('course.create');
     }
 
     /**

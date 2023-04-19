@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id('course_id');
             $table->string('course_name');
-            $table->foreignId('teacher_id');
             $table->string('course_des');
             $table->timestamps();
         });
+        
     }
 
     /**
