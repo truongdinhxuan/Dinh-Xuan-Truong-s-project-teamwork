@@ -22,6 +22,19 @@ return new class extends Migration
             $table->string('student_image');
             $table->timestamps();
         });
+        Schema::create('courses', function (Blueprint $table) {
+            $table->id('course_id');
+            $table->string('course_name');
+            $table->string('course_des');
+            $table->timestamps();
+        });
+        Schema::create('enrollments', function (Blueprint $table) {
+            // $table->id('enrollments_id');
+            $table->foreignId('student_id');
+            $table->foreignId('course_id');
+            $table->primary(['course_id', 'student_id']);
+            $table->timestamps();
+        });
     }
 
     /**
