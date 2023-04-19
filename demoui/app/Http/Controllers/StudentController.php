@@ -109,7 +109,7 @@ class StudentController extends Controller
             request()->student_image->move(public_path('images'), $student_image);
         }
 
-        $student = Student::find($request->hidden_student_id);
+        $student = Student::find($request->hidden_id);
 
         $student->student_name = $request->student_name;
 

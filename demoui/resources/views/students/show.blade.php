@@ -15,31 +15,31 @@
 		<div class="row mb-3">
 			<label class="col-sm-2 col-label-form"><b>Student Name</b></label>
 			<div class="col-sm-10">
-				{{ $student->name }}
+				{{ $student->student_name }}
 			</div>
 		</div>
 		<div class="row mb-3">
 			<label class="col-sm-2 col-label-form"><b>Student Email</b></label>
 			<div class="col-sm-10">
-				{{ $student->email }}
+				{{ $student->student_email }}
 			</div>
 		</div>
         <div class="row mb-3">
 			<label class="col-sm-2 col-label-form"><b>Student Address</b></label>
 			<div class="col-sm-10">
-				{{ $student->address }}
+				{{ $student->student_address }}
 			</div>
 		</div>
 		<div class="row mb-4">
 			<label class="col-sm-2 col-label-form"><b>Student Gender</b></label>
 			<div class="col-sm-10">
-				{{ $student->gender }}
+				{{ $student->student_gender }}
 			</div>
 		</div>
 		<div class="row mb-4">
 			<label class="col-sm-2 col-label-form"><b>Student Image</b></label>
 			<div class="col-sm-10">
-				<img src="{{ asset('images/' .  $student->image) }}" width="200" class="img-thumbnail" />
+				<img src="{{ asset('images/' .  $student->student_image) }}" width="200" class="img-thumbnail" />
 			</div>
 		</div>
 	</div>

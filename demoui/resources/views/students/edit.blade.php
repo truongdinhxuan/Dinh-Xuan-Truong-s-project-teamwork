@@ -11,25 +11,25 @@
 			<div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Name</label>
 				<div class="col-sm-10">
-					<input type="text" name="name" class="form-control" value="{{ $student->name }}" />
+					<input type="text" name="student_name" class="form-control" value="{{ $student->student_name }}" />
 				</div>
 			</div>
 			<div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Email</label>
 				<div class="col-sm-10">
-					<input type="text" name="email" class="form-control" value="{{ $student->email }}" />
+					<input type="text" name="student_email" class="form-control" value="{{ $student->student_email }}" />
 				</div>
 			</div>
 			<div class="row mb-3">
 				<label class="col-sm-2 col-label-form">Student Address</label>
 				<div class="col-sm-10">
-					<input type="text" name="address" class="form-control" value="{{ $student->address }}" />
+					<input type="text" name="student_address" class="form-control" value="{{ $student->student_address }}" />
 				</div>
 			</div>
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">Student Gender</label>
 				<div class="col-sm-10">
-					<select name="gender" class="form-control">
+					<select name="student_gender" class="form-control">
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
 					</select>
@@ -38,10 +38,10 @@
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">Student Image</label>
 				<div class="col-sm-10">
-					<input type="file" name="image" />
+					<input type="file" name="student_image" />
 					<br />
 					<img src="{{ asset('images/' . $student->image) }}" width="100" class="img-thumbnail" />
-					<input type="hidden" name="hidden_image" value="{{ $student->image }}" />
+					<input type="hidden" name="hidden_image" value="{{ $student->student_image }}" />
 				</div>
 			</div>
 			<div class="text-center">
@@ -52,7 +52,7 @@
 	</div>
 </div>
 <script>
-document.getElementsByName('gender')[0].value = "{{ $student->gender }}";
+document.getElementsByName('student_gender')[0].value = "{{ $student->student_gender }}";
 </script>
 {{-- @include('footer') --}}
 @endsection('content')
