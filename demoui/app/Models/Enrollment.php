@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Enrollment extends Model
 {
     use HasFactory;
+    protected $fillable = [];
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }
