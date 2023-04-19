@@ -23,17 +23,12 @@ return new class extends Migration
             $table->timestamps();
         });
         Schema::create('courses', function (Blueprint $table) {
-<<<<<<< HEAD
             $table->id();
-=======
-            $table->id('course_id');
->>>>>>> c62c000a2b789a89729afb36e097040811a9f707
             $table->string('course_name');
             $table->string('course_des');
             $table->timestamps();
         });
         Schema::create('enrollments', function (Blueprint $table) {
-<<<<<<< HEAD
             // $table->id();
             // $table->foreignId('student_id');
             // $table->foreignId('course_id');
@@ -48,13 +43,6 @@ return new class extends Migration
         
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
-=======
-            // $table->id('enrollments_id');
-            $table->foreignId('student_id');
-            $table->foreignId('course_id');
-            $table->primary(['course_id', 'student_id']);
-            $table->timestamps();
->>>>>>> c62c000a2b789a89729afb36e097040811a9f707
         });
     }
 
