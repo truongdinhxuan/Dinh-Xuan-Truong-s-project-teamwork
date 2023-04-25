@@ -40,7 +40,7 @@
 				<div class="col-sm-10">
 					<input type="file" name="student_image" />
 					<br />
-					<img src="{{ asset('images/' . $student->image) }}" width="100" class="img-thumbnail" />
+					<img src="{{ asset('images/' . $student->student_image) }}" width="100" class="img-thumbnail" />
 					<input type="hidden" name="hidden_image" value="{{ $student->student_image }}" />
 				</div>
 			</div>

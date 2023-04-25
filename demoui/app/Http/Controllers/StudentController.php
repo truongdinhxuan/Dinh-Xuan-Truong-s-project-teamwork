@@ -94,10 +94,9 @@ class StudentController extends Controller
     {
         //
         $request->validate([
-            'student_name'=> 'required',
-            'student_email'=>'required|email',
-            'student_address'=>'required',
-            'student_image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+            'student_name'      =>  'required',
+            'student_email'     =>  'required|email',
+            'student_image'     =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
         ]);
 
         $student_image = $request->hidden_student_image;
@@ -114,8 +113,6 @@ class StudentController extends Controller
         $student->student_name = $request->student_name;
 
         $student->student_email = $request->student_email;
-        
-        $student->student_address = $request->student_address;
 
         $student->student_gender = $request->student_gender;
 
@@ -124,8 +121,9 @@ class StudentController extends Controller
         $student->save();
 
         return redirect()->route('students.index')->with('success', 'Student Data has been updated successfully');
-
     }
+
+    
 
     /**
      * Remove the specified resource from storage.
