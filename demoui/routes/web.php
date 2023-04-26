@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\TeacherCourseController;
 
 /*
@@ -24,5 +25,5 @@ Route::get('/', function () {
 Route::resource('students', StudentController::class);
 Route::resource('teacher', TeacherController::class);
 Route::resource('course', CourseController::class);
-Route::resource('enrollment', EnrollmentController::class);
+Route::resource('enrollments', EnrollmentController::class);
 Route::resource('teachercourse', TeacherCourseController::class);

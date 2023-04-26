@@ -12,7 +12,8 @@
     <strong><a href="/students"><h1 class="text-primary mt-3 mb-4 text-center" >Student page</h1></a></strong>
     <strong><a href="/course"><h1 class="text-primary mt-3 mb-4 text-center" >Course page</h1></a></strong>
     <strong><a href="/teacher"><h1 class="text-primary mt-3 mb-4 text-center" >Teacher page</h1></a></strong>
-    <strong><a href="/enrollment"><h1 class="text-primary mt-3 mb-4 text-center" >Enrollment page</h1></a></strong>
+    <strong><a href="/enrollments"><h1 class="text-primary mt-3 mb-4 text-center" >Enrollment page</h1></a></strong>
+    <strong><a href="/teachercourse"><h1 class="text-primary mt-3 mb-4 text-center" >Join teacher to course Page</h1></a></strong>
     <p class="text-center">Add student, add teacher, add course, enrollment</p>
     <br>
     <p class="text-left">Teacher, course sẽ được làm category khi add student</p>
