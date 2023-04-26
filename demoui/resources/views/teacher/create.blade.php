@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			{{-- CATEGORY	 --}}
-            <div class="row mb-3">
+            {{-- <div class="row mb-3">
 				<label class="col-sm-2 col-label-form">select Course</label>
 				<select name="form-control" wire:model.defer = "course_id">
 					<option value="">-- select --</option>
@@ -42,7 +42,7 @@
 					<option value="{{$courseItem->id}}">{{$courseItem->name}}</option>
 					@endforeach
 				</select>
-			</div>
+			</div> --}}
 			{{--  --}}
 			<div class="row mb-4">
 				<label class="col-sm-2 col-label-form">teacher Image</label>

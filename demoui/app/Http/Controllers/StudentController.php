@@ -99,7 +99,8 @@ class StudentController extends Controller
             'student_image'     =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
         ]);
 
-        $student_image = $request->hidden_student_image;
+        $student_image = $request->student_image;
+      
 
         if($request->student_image != '')
         {

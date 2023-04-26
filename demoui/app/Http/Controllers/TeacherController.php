@@ -49,8 +49,8 @@ class TeacherController extends Controller
         $teacher = new Teacher;
         $teacher->teacher_name = $request->teacher_name;
         $teacher->teacher_email= $request->teacher_email;
-        $teacher->teacher_address= $request->teacher_address;
-        $teacher->teacher_gender = $request->teacher_gender;
+        // $teacher->teacher_address= $request->teacher_address;
+        // $teacher->teacher_gender = $request->teacher_gender;
         $teacher->teacher_image = $file_name;
         $teacher->save();
 
@@ -94,10 +94,10 @@ class TeacherController extends Controller
         $request->validate([
             'teacher_name'=> 'required',
             'teacher_email'=>'required|email',
-            'teacher_image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+            'teacher_image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|'
         ]);
 
-        $teacher_image = $request->hidden_teacher_image;
+        $teacher_image = $request->teacher_image;
 
         if($request->teacher_image != '')
         {
@@ -106,15 +106,13 @@ class TeacherController extends Controller
             request()->teacher_image->move(public_path('images'), $teacher_image);
         }
 
-        $teacher = Teacher::find($request->hidden_teacher_id);
+        $teacher = Teacher::find($request->hidden_id);
 
         $teacher->teacher_name = $request->teacher_name;
 
         $teacher->teacher_email = $request->teacher_email;
         
-        $teacher->teacher_address = $request->teacher_address;
-
-        $teacher->teacher_gender = $request->teacher_gender;
+    
 
         $teacher->teacher_image = $teacher_image;
 

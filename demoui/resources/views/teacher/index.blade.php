@@ -36,10 +36,10 @@
 				@foreach($data as $row)
 
 					<tr>
-						<td><img src="{{ asset('images/' . $row->image) }}" width="75" /></td>
-						<td>{{ $row->name }}</td>
-						<td>{{ $row->email }}</td>
-						<td>{{ $row->course }}</td>
+						<td><img src="{{ asset('images/' . $row->teacher_image) }}" width="75" /></td>
+						<td>{{ $row->teacher_name }}</td>
+						<td>{{ $row->teacher_email }}</td>
+						
 						<td>
 							<form method="post" action="{{ route('teacher.destroy', $row->id) }}">
 								@csrf

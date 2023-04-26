@@ -41,7 +41,7 @@
 					<input type="file" name="student_image" />
 					<br />
 					<img src="{{ asset('images/' . $student->student_image) }}" width="100" class="img-thumbnail" />
-					<input type="hidden" name="hidden_image" value="{{ $student->student_image }}" />
+					<input type="hidden" name="student_image" value="{{ $student->student_image }}" />
 				</div>
 			</div>
 			<div class="text-center">
