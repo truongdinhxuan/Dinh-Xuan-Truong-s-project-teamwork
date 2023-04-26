@@ -7,6 +7,16 @@
     <title>Start</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="https://greenwich.edu.vn/">
+            <img src="https://upload.wikimedia.org/wikipedia/vi/b/bf/Official_logo_of_Greenwich_Vietnam.png"
+                 height="50"
+                 alt="G Logo"
+                 loading="lazy" />
+        </a>
+    </div>
+</nav>
 <body>
     <div class="container mt-5">
     <strong><h1 class="text-primary mt-3 mb-4 text-center" >Student Page</h1></strong>
