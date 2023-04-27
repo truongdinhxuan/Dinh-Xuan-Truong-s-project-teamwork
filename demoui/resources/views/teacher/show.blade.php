@@ -1,7 +1,7 @@
 @extends('students/master')
 
 @section('content')
-
+<div href="{{ route('teacher.index') }}" class="btn btn-primary ">back</div>
 <div class="card">
 	<div class="card-header">
 		<div class="row">

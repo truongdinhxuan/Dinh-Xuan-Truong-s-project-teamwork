@@ -1,7 +1,7 @@
 @extends('course/master')
 
 @section('content')
-
+<a href="{{ route('course.index') }}" class="btn btn-primary btn-sm float-end">back</a>
 <h1>Create Course</h1>
     <form method="POST" action="{{ route('course.store') }}">
         @csrf

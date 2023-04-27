@@ -13,7 +13,7 @@
 {{-- @include('header') --}}
 
 
-<h1>Courses</h1>
+<h1>Courses</h1> 
     <a href="{{ route('course.create') }}" class="btn btn-primary">Create Course</a>
     <hr>
     <table class="table table-bordered">

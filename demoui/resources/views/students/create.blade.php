@@ -3,7 +3,7 @@
 @section('content')
 
 @if($errors->any())
-
+	
 <div class="alert alert-danger">
 	<ul>
 	@foreach($errors->all() as $error)
@@ -15,7 +15,7 @@
 </div>
 
 @endif
-
+<a href="{{ route('students.index') }}" class="btn btn-primary ">back</a>
 <div class="card">
 	<div class="card-header">Add Student</div>
 	<div class="card-body">

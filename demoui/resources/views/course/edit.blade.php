@@ -2,6 +2,7 @@
 
 @section('content')
 {{-- @include('header') --}}
+<a href="{{ route('course.index') }}" class="btn btn-primary ">back</a>
 <div class="card">
 	<div class="card-header">Edit Course</div>
 	<div class="card-body">
