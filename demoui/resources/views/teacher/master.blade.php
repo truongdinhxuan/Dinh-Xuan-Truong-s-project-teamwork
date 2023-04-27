@@ -9,7 +9,7 @@
 </head>
 <nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="https://greenwich.edu.vn/">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">
             <img src="https://upload.wikimedia.org/wikipedia/vi/b/bf/Official_logo_of_Greenwich_Vietnam.png"
                  height="50"
                  alt="G Logo"

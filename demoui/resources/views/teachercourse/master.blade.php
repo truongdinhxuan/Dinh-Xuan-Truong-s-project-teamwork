@@ -19,7 +19,7 @@
 </nav>
 <body>
     <div class="container mt-5">
-    <strong><h1 class="text-primary mt-3 mb-4 text-center" >Course Page</h1></strong>
+    <strong><h1 class="text-primary mt-3 mb-4 text-center" >TeacherCourse Page</h1></strong>
     @yield('content')
     <div class="container p-4">
         <!-- Section: Images -->

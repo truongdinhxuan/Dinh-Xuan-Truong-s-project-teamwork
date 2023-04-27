@@ -28,7 +28,6 @@
 				<th>Image</th>
 				<th>Name</th>
 				<th>Email</th>
-				<th>Course</th>
 				<th>Action</th>
 			</tr>
 			@if(count($data) > 0)

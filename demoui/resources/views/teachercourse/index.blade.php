@@ -1,4 +1,4 @@
-@extends('students/master')
+@extends('teachercourse/master')
 
 @section('content')
 <div class="container">
