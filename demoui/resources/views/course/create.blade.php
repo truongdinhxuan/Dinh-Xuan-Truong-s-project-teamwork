@@ -1,6 +1,19 @@
 @extends('course/master')
 
 @section('content')
+@if($errors->any())
+	
+<div class="alert alert-danger">
+	<ul>
+	@foreach($errors->all() as $error)
+
+		<li>{{ $error }}</li>
+
+	@endforeach
+	</ul>
+</div>
+
+@endif
 <a href="{{ route('course.index') }}" class="btn btn-primary btn-sm float-end">back</a>
 <h1>Create Course</h1>
     <form method="POST" action="{{ route('course.store') }}">
